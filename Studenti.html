@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://academicinfo.ubbcluj.ro/Studenti.aspx -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Nou -->
+    <!-- jQuery GLOBAL (disponibil pentru toate paginile child) -->
+    <script src="./Studenti_files/jquery-3.7.1.min.js.download"></script>
+
+    <!-- (opțional) Bootstrap, dacă e folosit global -->
+    <script src="./Studenti_files/bootstrap.min.js.download" crossorigin="anonymous"></script>
+
+    <!-- AICI, abia după jQuery, vin placeholderul de head și restul -->
+    
+    <!-- .... -->
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"><title>
+	Studenti
+</title><meta name="description"><meta name="keywords">
+
+
+    <script>
+        $(document).ready(function () {
+            $("#meniu_toggle").click(function (e) {
+                if ($('#row_left').hasClass('open_rowleft')) {
+                    $('#row_left').removeClass('open_rowleft').addClass('close_rowleft');
+                    $('#meniu_toggle').find('i').removeClass('fa-times').addClass('fa-bars');
+                    $('#content').removeClass('normal_content').addClass('full_content');
+                }
+                else {
+                    $('#row_left').removeClass('close_rowleft').addClass('open_rowleft');
+                    $('#meniu_toggle').find('i').addClass('fa-times').removeClass('fa-bars');
+                    $('#content').addClass('normal_content').removeClass('full_content');
+
+                }
+                e.preventDefault();
+
+
+            });
+
+            $(document).mouseup(function (e) {
+                var container = $("#row_left");
+
+                if (container.is(e.target) && container.has(e.target).length === 0) {
+                    $('#row_left').removeClass('close_rowleft').addClass('open_rowleft');
+                    $('#meniu_toggle').find('i').addClass('fa-times').removeClass('fa-bars');
+                    $('#content').addClass('normal_content').removeClass('full_content');
+                }
+            });
+
+
+
+        });
+    </script>
+
+
+    <!-- Favicons -->
+    <!-- Google Fonts -->
+
+
+    <!-- Vendor CSS Files -->
+    <link href="./Studenti_files/bootstrap.min.css" rel="stylesheet">    <link href="./Studenti_files/quill.snow.css" rel="stylesheet"><link href="./Studenti_files/quill.bubble.css" rel="stylesheet"><link href="./Studenti_files/style.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="./Studenti_files/style(1).css" rel="stylesheet">
+
+
+    <!-- vechi-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <!-- fontawesome-->
+    <link href="./Studenti_files/style(2).css" rel="stylesheet" type="text/css">
+    <!-- bootstrap-->
+    <link href="./Studenti_files/bootstrap(1).min.css" rel="stylesheet"><link href="./Studenti_files/bootstrap-table.min.css" rel="stylesheet">
+    <script src="./Studenti_files/jquery-3.3.1.slim.min.js.download"></script>
+
+    <!-- bootstrap-->
+    <script src="./Studenti_files/popper.min.js.download"></script>
+    <script src="./Studenti_files/bootstrap.min(1).js.download"></script>
+    <!-- end vechi-->
+
+    <style>
+        .icon-svg {
+            width: 1em;
+            height: 1em;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            vertical-align: -0.125em;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #fff;
+            color: #ffffff;
+            text-align: center;
+            font-size: 10px;
+            padding-left: 15px;
+        }
+
+        .footer .copy_footer {
+            text-align: left;
+            color: #666666;
+            clear: left;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-user-name {
+                display: none !important;
+            }
+        }
+    </style>
+    
+    <title>Studenti</title>
+
+    <link href="./Studenti_files/StylePopload.css" rel="stylesheet">
+
+   
+</head>
+<body><div id="WzTtDiV" style="visibility: hidden; position: absolute; overflow: hidden; padding: 0px; width: 0px; left: 0px; top: 0px;"></div>
+    <script src="./Studenti_files/wz_tooltip.js.download" type="text/javascript"></script>
+    <div>
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B8608825">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="CelaOB9i376irMQ4sekTf93e1DNIMBqvUj1azGsu0yCBg3Dp4da5ozG5yBEZBpjK1HnsdbhkbYP2AF6+xHaRtbmjRbDApxarW7Qls3mdVF0qR80Gg6CQ35OOKUYpeHT8f2+TKBkMsfWLHhz6DJ8fWv2eSEVqW01iEYOSG+a1R/IyNcK2qP7Z0rWEsL+Nb+1HEWr7Pq3MjOHFF1KPKLx+zA==">
+</div>
+
+
+        <!-- ======= Header ======= -->
+        <header id="header" class="header fixed-top d-flex align-items-center">
+            <div class="col-lg-2 logo d-flex align-items-center justify-content-between">
+                
+                
+            </div>
+            <!-- End Logo -->
+            <i class="toggle-sidebar-btn" aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></i>
+            <div class="col-lg-6 align-items-center justify-content-between text-center ">
+                <h1>Academic<em style="color: #F44336;">Info</em></h1>
+            </div>
+            <!-- End Search Bar -->
+
+            <nav class="header-nav ms-auto">
+                <ul class="d-flex align-items-center">
+                    <li class="nav-item dropdown pe-3">
+                        <a class="nav-link nav-profile d-flex align-items-center pe-0 fs-4">
+                            <i aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="9" r="3"></circle><path d="M5.7 19a7 7 0 0 1 12.6 0"></path></svg></i>
+                            <span id="ctl00_lblNume" class="mobile-user-name">Cristiana-Ioana Grigoras</span>
+                        </a>
+                        <!-- End Profile Iamge Icon -->
+                        <!-- End Profile Dropdown Items -->
+                    </li>
+                    <!-- End Profile Nav -->
+                </ul>
+            </nav>
+
+            <!-- End Icons Navigation -->
+
+        </header>
+        <!-- End Header -->
+
+        <!-- ======= Sidebar ======= -->
+        <aside id="sidebar" class="sidebar">
+            <ul class="sidebar-nav" id="sidebar-nav">
+                <li class="header_logo text-center ">
+                    <a href="https://www.ubbcluj.ro/ro/" target="_blank" class="logo d-flex align-items-center">
+                        <img src="./Studenti_files/Logo-UBB-alb.svg" alt="">
+                    </a>
+
+                </li>
+                <li class=" py-1  text-right pr-1 header_logo">
+                    <img id="ctl00_ImageButtonRO" title="Română" alt="Română" src="./Studenti_files/ro.png" style="border-width:0px;">  &nbsp;
+                    <img id="ctl00_ImageButtonHU" title="Magyar" alt="Magyar" src="./Studenti_files/hu.png" style="border-width:0px;">  &nbsp; 
+                    <img id="ctl00_ImageButtonEN" title="English" alt="English" src="./Studenti_files/gb.png" style="border-width:0px;">  &nbsp;
+                    <img id="ctl00_ImageButtonDE" title="Deutsch" alt="Deutsch" src="./Studenti_files/de.png" style="border-width:0px;">
+                </li>
+
+                <li id="ctl00_link_Home" class="nav-item">
+                    <a href="./Home.html" id="ctl00_A2" class="nav-link collapsed" title="Home">
+                        <i aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-6v-7h-4v7H4a1 1 0 0 1-1-1z"></path></svg></i>
+                        <span id="ctl00_Label1Home">Home</span>
+                    </a></li>
+
+                <li id="ctl00_link_Studenti" class="active">
+                    <a href="./Studenti.html" class="nav-link collapsed">
+                        <i aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 11v5M12 8h.01"></path></svg></i>
+                        <span id="ctl00_Label1">Informatii</span></a>
+                </li>
+
+                <li id="ctl00_link_IdentitateaTa" class="nav-item">
+                    <a href="#" class="nav-link collapsed">
+                        <i aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="2.5"></circle><path d="M5.5 16a3.5 3.5 0 0 1 7 0M15 9h3M15 13h3M15 17h3"></path></svg></i>
+                        <span id="ctl00_lblIdentitateaTa">Identitatea Ta</span>
+                    </a>
+                </li>
+
+                <!-- Nou -->
+                <!-- Virtual Wallet (vizibil doar pentru conturile de test) -->
+                
+                <!--------->
+               
+                
+
+
+                
+                <li id="ctl00_link_Note" class="nav-item">
+                    <a href="#" id="ctl00_HyperLinkNote_" class="nav-link collapsed">
+                        <i aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><circle cx="5" cy="6" r=".8"></circle><path d="M9 6h11"></path><circle cx="5" cy="12" r=".8"></circle><path d="M9 12h11"></path><circle cx="5" cy="18" r=".8"></circle><path d="M9 18h11"></path></svg></i>
+                        <span id="ctl00_Label1ConsultareNote">Consultare note</span></a></li>
+                <li id="ctl00_link_NoteProvizorii" class="nav-item">
+                    <a href="#" id="ctl00_hlNote_" class="nav-link collapsed">
+                        <i aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><circle cx="5" cy="6" r=".8"></circle><path d="M9 6h11"></path><circle cx="5" cy="12" r=".8"></circle><path d="M9 12h11"></path><circle cx="5" cy="18" r=".8"></circle><path d="M9 18h11"></path></svg></i>
+                        <span id="ctl00_Label1ConsultareNoteProvizorii">Consultare note provizorii</span></a>
+
+                </li>
+                <li id="ctl00_link_Evaluari" class="nav-item">
+                    <a href="#" id="ctl00_HyperLink3_" class="nav-link collapsed">
+                        <i aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><circle cx="5" cy="6" r=".8"></circle><path d="M9 6h11"></path><circle cx="5" cy="12" r=".8"></circle><path d="M9 12h11"></path><circle cx="5" cy="18" r=".8"></circle><path d="M9 18h11"></path></svg></i>
+                        <span id="ctl00_Label1EvaluareProfesori">Evaluare profesori</span></a></li>
+                <li id="ctl00_link_StudentiPlanInvatamant" class="nav-item">
+                    <a href="#" id="ctl00_hlStudentiPlanInvatamant_" class="nav-link collapsed">
+                        <i aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><circle cx="5" cy="6" r=".8"></circle><path d="M9 6h11"></path><circle cx="5" cy="12" r=".8"></circle><path d="M9 12h11"></path><circle cx="5" cy="18" r=".8"></circle><path d="M9 18h11"></path></svg></i>
+                        <span id="ctl00_Label1PlanInvatamant">Plan invatamant</span>
+                    </a></li>
+                <li id="ctl00_link_ContracteStudii" class="nav-item">
+                    <a href="#" id="ctl00_hlContracte_" class="nav-link collapsed">
+                         <i aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M13 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><path d="m11 13 8-8 3 3-8 8-4 1z"></path></svg></i>
+                        <span id="ctl00_Label1ContracteStudii">Contracte studii</span></a>
+
+                </li>
+
+                <li id="ctl00_link_IncarcaDocumente" class="nav-item">
+                    <a href="#" id="ctl00_hl_IncarcaDocumente" class="nav-link collapsed">
+                        <i aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 15V3m-5 5 5-5 5 5M4 15v5h16v-5"></path></svg></i>
+                        <span id="ctl00_lblIncarcaDocumente">Incarcă documente </span></a>
+
+                </li>
+
+                
+
+                <li id="ctl00_link_StudentiInscriereLaExamen" class="nav-item">
+                    <a href="#" id="ctl00_hlStudentiInscriereLaExamen_" class="nav-link collapsed">
+                        <i aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M13 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><path d="m11 13 8-8 3 3-8 8-4 1z"></path></svg></i>
+                        <span id="ctl00_Label1InscriereLaExamen">Inscriere la examen</span></a>
+                </li>
+
+                <li id="ctl00_link_ProgramariExameneSectie" class="nav-item">
+                    <a href="#" id="ctl00_hlProgramariExameneSectie" class="nav-link collapsed">
+                        <i aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><circle cx="5" cy="6" r=".8"></circle><path d="M9 6h11"></path><circle cx="5" cy="12" r=".8"></circle><path d="M9 12h11"></path><circle cx="5" cy="18" r=".8"></circle><path d="M9 18h11"></path></svg></i>
+                        <span id="ctl00_Label1ProgramariExameneSectie">Examene programate pe sectie</span></a>
+                </li>
+                
+
+                
+
+                <li id="ctl00_link_InscriereLucrariAbsolvire" class="nav-item">
+                    <a href="#" id="ctl00_A1" title="Home" class="nav-link collapsed">
+                        <i aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M13 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><path d="m11 13 8-8 3 3-8 8-4 1z"></path></svg></i>
+                        <span id="ctl00_Label2">Inscriere  lucrare absolvire</span>
+                    </a>
+                </li>
+                <li id="ctl00_link_TabelLucrariAbsolvireSectie" class="nav-item">
+                    <a href="#" class="nav-link collapsed">
+                        <i aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><circle cx="5" cy="6" r=".8"></circle><path d="M9 6h11"></path><circle cx="5" cy="12" r=".8"></circle><path d="M9 12h11"></path><circle cx="5" cy="18" r=".8"></circle><path d="M9 18h11"></path></svg></i>
+                        <span id="ctl00_Label3">Tabel Lucrari Absolvire</span></a>
+                </li>
+
+                
+
+             
+                <li id="ctl00_link_Taxe" class="nav-item">
+                    <a href="#" id="ctl00_hltaxe_" class="nav-link collapsed">
+                        <i aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2"></rect><circle cx="12" cy="12" r="3"></circle><path d="M6 9h.01M18 15h.01"></path></svg></i>
+                        <span id="ctl00_Label1Taxe">Taxe</span></a></li>
+
+                <li id="ctl00_link_TaxeCamine" class="nav-item">
+                    <a href="#" id="ctl00_hlTaxeCamine_" class="nav-link collapsed">
+                        <i aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M3 21h18M5 21V5l7-3 7 3v16M9 8h1M14 8h1M9 12h1M14 12h1M10 21v-4h4v4"></path></svg></i>
+                        <span id="ctl00_LabelTaxeCamine">Taxe Cămine</span></a></li>
+
+                <li id="ctl00_link_Burse" class="nav-item">
+                    <a href="#" id="ctl00_hlBurse_" class="nav-link collapsed">
+                        <i aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg></i>
+                        <span id="ctl00_LabelBurse">Burse</span></a></li>
+
+                <li id="ctl00_link_SchimbareParolaStudenti" class="nav-item">
+                    <a href="#" id="ctl00_hlSchimbareParola_" class="nav-link collapsed">
+                        <i aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"></circle><path d="M3 20a6 6 0 0 1 12 0M18 8v6M15 11h6M16 9l4 4M20 9l-4 4"></path></svg></i>
+                        <span id="ctl00_Label1SchimbareParola">Schimbare Parola</span></a></li>
+
+
+                <li class="header_top pt-2 ">
+
+
+                    <a href="https://dtic.ubbcluj.ro/" target="_blank" class="logo ">
+                        <img src="./Studenti_files/Logo-DTIC-alb.svg">
+                    </a>
+                </li>
+            </ul>
+
+
+
+        </aside>
+        <!-- End Sidebar-->
+        <main id="main" class="main pb-2 ">
+            <div class="row  text-end pb-2  ">
+                <div class="col-12   text-end  pe-5">
+                    <a class="modal-title" href="./Home.html">
+                        <i aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M10 4H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h5M14 16l5-4-5-4M19 12H9"></path></svg></i>
+                        <span>Sign Out </span>
+                    </a>
+                </div>
+            </div>
+            <div class="labelNume">
+
+
+                <div id="ctl00_DivInfo" class="row ">
+                    
+
+                    
+                    
+                </div>
+
+            </div>
+            <div class="row pb-3">
+                 
+                
+    <div id="content_article_header" class="content_box card">
+        <div class="row">
+            <div class="col-12">
+                <span id="ctl00_ContentPlaceHolder1_lblPagina" class="card-title">Informatii</span>
+            </div>
+        </div>
+    </div>
+    <div class="card   ">
+        <div class="card-body">
+            <div class="row">
+                <div id="content_info" class="content_box">
+                    <h5>
+
+                        <span id="ctl00_ContentPlaceHolder1_lblMicrosoftTeams2" class="text-danger">Pentru accesarea contului instituțional aveți nevoie de următoarele date de logare:</span>
+                        <br>
+                        <span id="ctl00_ContentPlaceHolder1_lblMicrosoftTeams3" class="text-danger" style="color:Red;">Platforma: </span>
+
+                        <a href="https://mail.ubbcluj.ro/" target="_blank">https://mail.ubbcluj.ro </a>
+                        <br>
+
+                        <span id="ctl00_ContentPlaceHolder1_lblEmail" class="text-danger" style="color:Red;">E-mail:</span>
+                        <span id="ctl00_ContentPlaceHolder1_lbl_email">cristiana.grigoras@stud.ubblcuj.ro</span>
+                        
+
+                        
+                        
+                        <br>
+                        <span id="ctl00_ContentPlaceHolder1_lblMicrosoftTeamsParola" class="text-danger" style="color:Red;"> Parola initiala:</span>
+                        <span id="ctl00_ContentPlaceHolder1_lbl_MicrosoftTeamsParola">264961Parola0</span>
+                        <br>
+
+
+
+                        <a href="https://dtic.ubbcluj.ro/tutorial/conectare-office365-studenti/" target="_blank">
+                            <span id="ctl00_ContentPlaceHolder1_lblMicrosoftTeams_n1">Tutorial pentru prima accesare a contului</span>
+                        </a>
+                        <br>
+                        <a href="https://dtic.ubbcluj.ro/tutoriale/" target="_blank">
+                            <span id="ctl00_ContentPlaceHolder1_lblMicrosoftTeams_n2">Alte tutoriale</span>
+                        </a>
+                        <br>
+                        <a href="https://helpdesk.ubbcluj.ro/#login" target="_blank">
+                            <span id="ctl00_ContentPlaceHolder1_lblMicrosoftTeams_n3">Platformă de ticheting pentru probleme legate de cont</span>
+                        </a>
+                        <br>
+                      
+
+
+                    </h5>
+                </div>
+                <div class="row">
+                    <div class="col-4" style="text-align: right; padding-right: 50px;">
+
+                        <h5>
+                            <a target="_blank" href="https://academicinfo.ubbcluj.ro/Documente/informarePDCPstudentimasteranzidoctorantiUBB.pdf">
+                                
+                            </a>
+                        </h5>
+                    </div>
+                    <div class="col-8" style="text-align: right; padding-right: 50px;">
+                        <h5>
+                            <a target="_blank" href="https://academicinfo.ubbcluj.ro/Documente/Ghid_PDCP_studenti_online_14102020.pdf">
+
+                                <span id="ctl00_ContentPlaceHolder1_lblGhid">Ghid pentru protecția datelor în timpul desfășurării activităților online</span>
+
+                            </a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12" style="text-align: right; padding-right: 50px;">
+                        <h5>
+                            <a target="_blank" href="https://academicinfo.ubbcluj.ro/Documente/HCA_376_referitoare_la_Ghidul_privind_asigurarea_protectiei_datelor_cu_caracter_persona.pdf">
+                                <span id="ctl00_ContentPlaceHolder1_lblGhidExamen">Ghidul privind asigurarea protecției datelor cu caracter personal în timpul desfășurării examenelor online</span>
+                            </a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card  table-responsive  ">
+        <div class="card-body">
+            <div id="content_article_table" class="content_box">
+                <div class="row table-responsive-sm ">
+                    <div class="col  text-center pr-2  flex-fill ">
+                        <h3>
+                            <span id="ctl00_ContentPlaceHolder1_lblCodunicLabel" style="color:#426BC8;">Cod unic persoana: </span>
+                       
+                            <span id="ctl00_ContentPlaceHolder1_lblCodUnic" style="color:Red;">2Y108944</span>
+
+                        </h3>
+                    </div>
+                </div>
+
+                <div id="ctl00_ContentPlaceHolder1_LegitimatieCFR" class="row flex-fill p-1 ">
+
+                    <div class="col-sm-8 px-2  flex-fill  text-right  ">
+                        <h3>
+                            <span id="ctl00_ContentPlaceHolder1_lblLegitimatia1" style="color:#426BC8;">Legitimaţia de transport:</span>
+
+                            <span id="ctl00_ContentPlaceHolder1_lblLegitimatia_Seria" class="col-form-label" style="color:#426BC8;">Seria</span>
+
+                            <span id="ctl00_ContentPlaceHolder1_lblLegitimatiaSeria" style="color:Red;">H    </span>
+
+                            <span id="ctl00_ContentPlaceHolder1_lblLegitimatia_NR" style="color:#426BC8;">Nr.</span>
+
+                            <span id="ctl00_ContentPlaceHolder1_lblLegitimatiaNR" style="color:Red;">073497</span>
+
+                        </h3>
+                    </div>
+                    <div id="ctl00_ContentPlaceHolder1_genereazaAdeverinta" class="col-sm-4 pl-2 text-center">
+                        <a id="ctl00_ContentPlaceHolder1_lkbGenereazaAdeverinta" class="btn btn-blue" href="#">Genereaza adeverinta CFR</a>
+                    </div>
+
+                </div>
+
+                
+
+                <div class="content_box  py-2 ">
+                    <div class="row  table-responsive-sm pb-2">
+                        <div class="col-sm">
+                            <div>
+	<div class="bootstrap-table bootstrap4">
+      <div class="fixed-table-toolbar"><div class="columns columns-right btn-group float-right"><button class="btn btn-secondary" type="button" name="paginationSwitch" aria-label="Pagination Switch" title="Hide/Show pagination">
+        <i aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="m8 10 4 4 4-4"></path></svg></i>
+        
+        </button><button class="btn btn-secondary" type="button" name="toggle" aria-label="Toggle" title="Toggle">
+        <i aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="6"></rect><circle cx="8" cy="12" r="4"></circle></svg></i>
+        
+        </button><div class="keep-open btn-group" title="Columns">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-label="Columns" title="Columns">
+        <i aria-hidden="true"><svg class="icon-svg" viewBox="0 0 24 24"><circle cx="5" cy="6" r=".8"></circle><path d="M9 6h11"></path><circle cx="5" cy="12" r=".8"></circle><path d="M9 12h11"></path><circle cx="5" cy="18" r=".8"></circle><path d="M9 18h11"></path></svg></i>
+        
+        <span class="caret"></span>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right"><label class="dropdown-item"><input type="checkbox" data-field="0" value="0" checked="checked"> <span>Nr Crt</span></label><label class="dropdown-item"><input type="checkbox" data-field="1" value="1" checked="checked"> <span>Facultatea</span></label><label class="dropdown-item"><input type="checkbox" data-field="2" value="2" checked="checked"> <span>Forma Studii</span></label><label class="dropdown-item"><input type="checkbox" data-field="3" value="3" checked="checked"> <span>Sectia</span></label><label class="dropdown-item"><input type="checkbox" data-field="4" value="4" checked="checked"> <span>Grupa</span></label><label class="dropdown-item"><input type="checkbox" data-field="5" value="5" checked="checked"> <span>An universitar </span></label><label class="dropdown-item"><input type="checkbox" data-field="6" value="6" checked="checked"> <span>Forma Finantare</span></label></div></div></div>
+        <div class="float-right search btn-group">
+          <input class="form-control search-input" type="text" placeholder="Search">
+        </div>
+      </div>
+      
+      <div class="fixed-table-container" style="padding-bottom: 0px;">
+      <div class="fixed-table-header" style="display: none;"><table></table></div>
+      <div class="fixed-table-body">
+      <div class="fixed-table-loading table table-bordered table-hover" style="top: 81px;">
+      <span class="loading-wrap">
+      <span class="loading-text">Loading, please wait</span>
+      <span class="animation-wrap"><span class="animation-dot"></span></span>
+      </span>
+      </div>
+      <table class="tabelnote table table-striped table-condensed caption-top table-hover border w-auto table-bordered" cellspacing="0" align="Center" rules="all" border="1" id="ctl00_ContentPlaceHolder1_gvFormaFinantare" style="border-color:Black;width:95%;border-collapse:collapse;" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-toggle="true" data-show-pagination-switch="true"><thead class="thead-light"><tr><th style="" data-field="0"><div class="th-inner sortable both">Nr Crt</div><div class="fht-cell"></div></th><th style="" data-field="1"><div class="th-inner sortable both">Facultatea</div><div class="fht-cell"></div></th><th style="" data-field="2"><div class="th-inner sortable both">Forma Studii</div><div class="fht-cell"></div></th><th style="" data-field="3"><div class="th-inner sortable both">Sectia</div><div class="fht-cell"></div></th><th style="" data-field="4"><div class="th-inner sortable both">Grupa</div><div class="fht-cell"></div></th><th style="" data-field="5"><div class="th-inner sortable both">An universitar </div><div class="fht-cell"></div></th><th style="" data-field="6"><div class="th-inner sortable both">Forma Finantare</div><div class="fht-cell"></div></th></tr></thead>
+		<tbody><tr data-index="0"><td style=""><strong>
+                                                1</strong></td><td style="">Facultatea de Matematică şi Informatică</td><td style="">Licenţă</td><td style="">Informatică (în limba engleză) -&gt; 2019/2022</td><td style="">937</td><td style="">2021/2022</td><td style="">buget</td></tr><tr data-index="1"><td style=""><strong>
+                                                2</strong></td><td style="">Facultatea de Matematică şi Informatică</td><td style="">Licenţă</td><td style="">Informatică (în limba engleză) -&gt; 2019/2022</td><td style="">927</td><td style="">2020/2021</td><td style="">buget</td></tr><tr data-index="2"><td style=""><strong>
+                                                3</strong></td><td style="">Facultatea de Matematică şi Informatică</td><td style="">Licenţă</td><td style="">Informatică (în limba engleză) -&gt; 2019/2022</td><td style="">917</td><td style="">2019/2020</td><td style="">buget</td></tr><tr data-index="3"><td style=""><strong>
+                                                4</strong></td><td style="">Facultatea de Matematică şi Informatică</td><td style="">Master</td><td style="">Securitate cibernetică -&gt; 2024/2026</td><td style="">PREL 25-26</td><td style="">2025/2026</td><td style="">buget</td></tr><tr data-index="4"><td style=""><strong>
+                                                5</strong></td><td style="">Facultatea de Matematică şi Informatică</td><td style="">Master</td><td style="">Securitate cibernetică -&gt; 2023/2025</td><td style="">250</td><td style="">2024/2025</td><td style="">buget</td></tr><tr data-index="5"><td style=""><strong>
+                                                6</strong></td><td style="">Facultatea de Matematică şi Informatică</td><td style="">Master</td><td style="">Securitate cibernetică -&gt; 2024/2026</td><td style="">PREL 25-26</td><td style="">2024/2025</td><td style="">buget</td></tr><tr data-index="6"><td style=""><strong>
+                                                7</strong></td><td style="">Facultatea de Matematică şi Informatică</td><td style="">Master</td><td style="">Securitate cibernetică -&gt; 2023/2025</td><td style="">240</td><td style="">2023/2024</td><td style="">taxa</td></tr></tbody><tfoot style="display: none;"><tr></tr></tfoot></table></div>
+      <div class="fixed-table-footer"><table><thead><tr></tr></thead></table></div>
+      </div>
+      <div class="fixed-table-pagination"><div class="float-left pagination-detail">
+      <span class="pagination-info">
+      Showing 1 to 7 of 7 rows
+      </span><span class="page-list" style="display: none;"><span class="btn-group dropdown dropup">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+        <span class="page-size">
+        10
+        </span>
+        <span class="caret"></span>
+        </button>
+        <div class="dropdown-menu"><a class="dropdown-item active" href="./Studenti.html#">10</a></div></span> rows per page</span></div><div class="float-right pagination" style="display: none;"><ul class="pagination"><li class="page-item page-pre"><a class="page-link" aria-label="previous page" href="javascript:void(0)">‹</a></li><li class="page-item active"><a class="page-link" aria-label="to page 1" href="javascript:void(0)">1</a></li><li class="page-item page-next"><a class="page-link" aria-label="next page" href="javascript:void(0)">›</a></li></ul></div></div>
+      </div><div class="clearfix"></div>
+</div>
+                            
+                        </div>
+                    </div>
+                    <div class="w-100"></div>
+
+                    <div class="row  table-responsive-sm ">
+                        <div class="col-sm">
+                            <div>
+
+</div>
+                            
+                        </div>
+                    </div>
+
+                    
+
+                    
+
+                    
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    
+
+
+    
+    <script type="text/javascript" src="./Studenti_files/jquery.min.js.download"> </script>
+    
+    </div>
+
+            
+
+        </main>
+
+        <div id="footer" class="footer">
+            <div id="copy_footer" class="copy_footer">
+                Copyright © UBB      &nbsp; &nbsp; &nbsp; 
+                <a href="https://www.ubbcluj.ro/ro/politici/" target="_blank">
+                    <span id="ctl00_lblMicrosoftTeams12">Protecția datelor cu caracter personal</span>
+                </a>
+                &nbsp; &nbsp; &nbsp; 
+                <a target="_blank" href="https://academicinfo.ubbcluj.ro/Termeni_si_conditii.aspx">
+                    <span id="ctl00_lblTermeni"> Termeni și Condiții </span>
+                </a>
+                &nbsp; &nbsp; &nbsp; 
+                <a target="_blank" href="https://academicinfo.ubbcluj.ro/Confidentialitate.aspx">
+                    <span id="ctl00_lblConfeidentialitate">Politica de confidentialitate</span>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <!-- Vendor JS Files -->
+    <script src="./Studenti_files/bootstrap.bundle.min.js.download"></script>
+
+    <script src="./Studenti_files/simple-datatables.js.download"></script>
+    <script src="./Studenti_files/tinymce.min.js.download"></script>
+
+
+    <!-- Template Main JS File -->
+    <script src="./Studenti_files/main.js.download"></script>
+
+
+
+</body></html>

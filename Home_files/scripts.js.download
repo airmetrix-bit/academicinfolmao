@@ -1,0 +1,106 @@
+// JavaScript Document
+
+$(function () {
+
+// pentru index login, responsive
+	
+	var login_content = $("body.login_page #content").html();	
+	var lenght_login_content = $("body.login_page #content").text().length;
+	function movelogin (logincontent_, windowWidth_) {
+	
+		if (windowWidth_< 860 ) {
+				
+				var lenght_login_container_left = $("body.login_page #header>#content_wrapper").text().length;
+				if (lenght_login_container_left == 0) {
+					$(".login_container").wrap(login_content);
+					$( "#wrapper>#content" ).remove();
+					$( "#wrapper>#row_left" ).after('<div id="content_right"></div>');
+					$('body.login_page').addClass('movecontent');
+				} else{		}
+				
+			}
+			else {
+				var lenght_login_container_right = $("body.login_page #wrapper>#content").text().length;
+				if (lenght_login_container_right == 0) {
+					$("#content_right").wrap('<div id="content">' + login_content + '</div>');
+					$( "#header>#content_wrapper" ).remove();
+					$( "#header>.header_lang" ).after('<div class="login_container"></div>');
+					$('body.login_page').removeClass('movecontent');
+				}
+				else {}
+   			
+			}		
+	}
+		
+		
+$(window).resize(function() {		
+		var windowWidth = $(window).width();
+
+		if (lenght_login_content == 0) {}
+		else{movelogin(login_content, windowWidth);	}
+		});	// end resize
+	
+$(document).ready(function(){
+
+		var windowWidth = $(window).width();
+
+		if (lenght_login_content == 0) {console.log ('nomove');}
+	else{console.log ('move');
+		movelogin(login_content, windowWidth);
+	}
+	
+// afiseaza parola in text 
+$(".toggle-password").click(function() {
+
+  $(this).toggleClass("fa-eye fa-eye-slash");
+  var input = $($(this).attr("toggle"));
+		console.log (input);
+  if (input.attr("type") === "password") {
+    input.attr("type", "text");
+  } else {
+    input.attr("type", "password");
+  }
+});	// end parola txt
+	
+	
+			
+});	// end document.ready
+
+});
+// ========= end responsive index	
+	
+	
+// ========= meniu toggle 
+	
+$(document).ready(function(){
+	$(".table.facheck td table tr>td").prepend('<i class="fas fa-check"></i>');
+	
+	$("#meniu_toggle").click(function(e){
+        if ($('#row_left').hasClass('open_rowleft')){
+			$('#row_left').removeClass('open_rowleft').addClass('close_rowleft');
+			$('#meniu_toggle').find('i').removeClass('fa-times').addClass('fa-bars');  
+			$('#content').removeClass('normal_content').addClass('full_content');
+        }
+		else {
+			$('#row_left').removeClass('close_rowleft').addClass('open_rowleft');
+			 $('#meniu_toggle').find('i').addClass('fa-times').removeClass('fa-bars'); 
+			$('#content').addClass('normal_content').removeClass('full_content');
+        		
+		}  
+        e.preventDefault();
+ 	});
+		
+$(document).mouseup(function(e){
+    var container = $("#row_left");
+
+    if(container.is(e.target) && container.has(e.target).length === 0){
+        $('#row_left').removeClass('close_rowleft').addClass('open_rowleft');
+		$('#meniu_toggle').find('i').addClass('fa-times').removeClass('fa-bars');
+		$('#content').addClass('normal_content').removeClass('full_content');
+    }
+});	
+		
+}); // end meniu toggle
+	
+
+

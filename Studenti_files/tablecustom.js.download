@@ -1,0 +1,50 @@
+// JavaScript Document
+
+
+	// ========= add .table thead + tbody
+	
+function addthead(tabelclasa) {
+	
+$(tabelclasa).each(function(){
+	
+	
+	var id_ = "#" + $(this).attr('id');
+	var myTable = $(id_);
+	var thHead1 = myTable.find("thead");
+
+	var thRows = myTable.find("tr:has(th)");
+
+	if (thHead1.children().length === 0){
+		
+		thHead1.remove();
+ 		$(thRows).wrapAll( "<thead class=\"thead-light\"></thead>");
+		var thHead = myTable.find("thead");
+		thHead.prependTo(myTable);
+    //thHead.find("tr:nth-child(2)").remove();
+	}	
+	else {}
+	
+	$(this).attr({'data-toggle':'table', 
+				  'data-pagination': 'true', 
+				  'data-search': 'true', 
+				  'data-show-columns':'true',
+				  'data-show-toggle': 'true',
+				  'data-show-pagination-switch':'true'});
+	 $(this).addClass('table table-hover table-striped w-auto table-bordered');
+	
+
+	$('table' + tabelclasa + ' th').attr({
+				'data-sortable':'true',
+				'data-sort-order':'desc',
+				'data-searchable': 'true'});
+		console.log ('gata addthead');
+
+});	
+}
+// ============== end addthead	    
+	
+$(document).ready(function(){
+
+	addthead('.tabelnote');
+	
+});	// =============== end add .table thead + tbody
